@@ -2,8 +2,6 @@ name: Build
 
 on:
   push:
-    tags:
-      - '*'
 
 jobs:
   build:
@@ -12,6 +10,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Get Dependancies
+      run: |
+        sudo apt install SDL2 SDL2_devel libpthread-stubs0-dev
     - name: Build
       run: |
         rm -f steam_get
@@ -23,6 +24,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: steam_get
         asset_name: linux-amd64
-        tag: ${{ github.ref }}
+        tag: nightly
         overwrite: true
         body: "Nightly"
