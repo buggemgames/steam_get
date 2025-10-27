@@ -1,6 +1,9 @@
 # steam_get
 
-Tool to get your achievements. **COMPLETELY** open-source and free, we bypass Valve's interlectual property (headers) by getting the functions out manually. Heavily based on VVVVVV's Steam API implementation.
+Tool to get your achievements. Free and open-source, we bypass using Valve's headers by loading the functions manually.
+
+
+Heavily based on VVVVVV's Steam API implementation.
 
 ## User's Guide
 
